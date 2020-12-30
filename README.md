@@ -41,9 +41,9 @@ public:
 };
  ```
 
-![screenshot](Screenshot.png)
-
 As seen in the screenshot, over an average of 50 samples, calling a single function with a loop inside, to add a double value to an array of Vector2 structs, is 1.46 times faster as calling each Vector2 object from an array to do the same job. Using a similar function to add to a struct of an arrays with xs and ys proves to be 1.98 times faster.
+
+![screenshot](Screenshot.png)
 
 The base speed of the object method call was expected to be derived from pushing and popping from the program call stack with the explicit parameters and the implicit object memory address. Additionally, the x and y variables would be accessed in different memory locations in which data caching would be limited. Instruction caching might have been limited too given that the addition operation is performed after distinct function calls. 
 
